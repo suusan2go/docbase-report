@@ -1,6 +1,6 @@
-require "docbase_stats/version"
+require "docbase_report/version"
 
-module DocBaseStats
+module DocBaseReport
   class Error < StandardError; end
   # Your code goes here...
 end

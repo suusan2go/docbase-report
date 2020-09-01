@@ -1,3 +1,3 @@
-module DocBaseStats
+module DocBaseReport
   VERSION = "0.1.0"
 end

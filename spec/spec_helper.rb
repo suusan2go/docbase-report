@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "docbase_stats"
+require "docbase_report"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "docbase_stats/version"
+require "docbase_report/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "docbase_stats"
-  spec.version       = DocBaseStats::VERSION
+  spec.name          = "docbase_report"
+  spec.version       = DocBaseReport::VERSION
   spec.authors       = ["suusan2go"]
   spec.email         = ["ksuzuki180@gmail.com"]
 
-  spec.summary       = %q{a CLI tool to summarize and print stats for your DocBase team}
-  spec.description   = %q{a CLI tool to summarize and print stats for your DocBase team}
-  spec.homepage      = "https://github.com/suusan2go/docbase-stats"
+  spec.summary       = %q{a CLI tool to make a summary report for your DocBase team}
+  spec.description   = %q{a CLI tool to make a summary report for your DocBase team}
+  spec.homepage      = "https://github.com/suusan2go/docbase-report"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/suusan2go/activerecord-enum_sti"
+    spec.metadata["source_code_uri"] = "https://github.com/suusan2go/docbase-report"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
