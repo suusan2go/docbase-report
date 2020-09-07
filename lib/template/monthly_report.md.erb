@@ -1,0 +1,18 @@
+# <%= target_date.month %>月のランキング
+
+## グッジョブランキング
+<% summary.good_jobs_ranking.each_with_index do |post, index| %>
+### <%= index + 1 %>位 <%= post["good_jobs_count"] %>グッジョブ　「<%= post["title"] %>」
+#{<%= post["id"] %>}
+<% end %>
+## スターランキング
+<% summary.stars_ranking.each_with_index do |post, index| %>
+### <%= index + 1 %>位 <%= post["stars_count"] %>スター　「<%= post["title"] %>」
+#{<%= post["id"] %>}
+<% end %>
+
+## コメントランキング
+<% summary.commented_ranking.each_with_index do |post, index| %>
+### <%= index + 1 %>位 <%= post["comments"].length %>コメント　「<%= post["title"] %>」
+#{<%= post["id"] %>}
+<% end %>
