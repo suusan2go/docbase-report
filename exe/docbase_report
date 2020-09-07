@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "docbase_report"
+
+DocBaseReport::CLI.start
