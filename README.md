@@ -1,10 +1,55 @@
 # DocBaseReport
+A CLI tool to curate popular articles on DocBase. you can make a summary post by the command below.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/docbase_report`. To experiment with that code, run `bin/console` for an interactive prompt.
+```bash
+$ bundle exec exe/docbase_report docbase_report monthly_report 2020-08-01
 
-TODO: Delete this and the text above, and describe your gem
+# 8月のランキング
+
+## グッジョブランキング
+
+### 1位 34グッジョブ　「とっても人気のある記事」
+#{123456}
+
+### 2位 21グッジョブ　「ちょっと人気のある記事」
+#{6789}
+
+### 3位 21グッジョブ　「まあまあ人気のある記事」
+#{101112}
+
+## スターランキング
+
+### 1位 7スター　「とっても人気のある記事」
+#{123456}
+
+### 2位 6スター　「ちょっと人気のある記事」
+#{6789}
+
+### 3位 6スター　「まあまあ人気のある記事」
+#{101112}
+
+
+## コメントランキング
+
+### 1位 24コメント　　「とっても人気のある記事」
+#{123456}
+
+### 2位 9コメント　「ちょっと人気のある記事」
+#{6789}
+
+### 3位 5コメント　「まあまあ人気のある記事」
+#{101112}
+```
+
+
 
 ## Installation
+```bash
+git clone https://github.com/suusan2go/docbase-report
+bundle install
+```
+
+**This gem is not published yet.**
 
 Add this line to your application's Gemfile:
 
@@ -21,8 +66,20 @@ Or install it yourself as:
     $ gem install docbase_report
 
 ## Usage
+```bash
+# set environment value
+$  export DOCBASE_TEAM=<your team name>
+$  export DOCBASE_ACCESS_TOKEN=<your token>
+# show monthly ranking
+$ bundle exec exe/docbase_report docbase_report monthly_report 2020-08-01
+```
 
-TODO: Write usage instructions here
+## TODO
+- [ ] implement weekly report command
+- [ ] direct publish
+- [ ] rename project name
+- [ ] publish to ruby gems
+- [ ] add test code
 
 ## Development
 
