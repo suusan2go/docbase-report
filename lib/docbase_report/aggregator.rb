@@ -30,24 +30,24 @@ module DocBaseReport
       @posts = posts
     end
 
-    def good_jobs_ranking
-      @posts.sort_by { |post| post["good_jobs_count"] }.reverse
+    def good_jobs_ranking(limit = 3)
+      @posts.sort_by { |post| post["good_jobs_count"] }.reverse.first(limit)
     end
 
-    def stared_ranking
-      @posts.sort_by { |post| post["stars_count"] }.reverse
+    def stars_ranking(limit = 3)
+      @posts.sort_by { |post| post["stars_count"] }.reverse.first(limit)
     end
 
-    def commented_ranking
-      @posts.sort_by { |post| post["comments"].length }.reverse
+    def commented_ranking(limit = 3)
+      @posts.sort_by { |post| post["comments"].length }.reverse.first(limit)
     end
 
-    def number_of_posts_per_day
-      @posts.group_by { |post| post["created_at"].to_date }.reverse
+    def number_of_posts_per_day(limit = 3)
+      @posts.group_by { |post| post["created_at"].to_date }.reverse.first(limit)
     end
 
-    def number_of_posts_per_month
-      @posts.group_by { |post| post["created_at"].to_date.beginning_of_month }.reverse
+    def number_of_posts_per_month(limit = 3)
+      @posts.group_by { |post| post["created_at"].to_date.beginning_of_month }.reverse.first(limit)
     end
   end
 end
