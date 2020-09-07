@@ -70,6 +70,8 @@ Or install it yourself as:
 # set environment value
 $  export DOCBASE_TEAM=<your team name>
 $  export DOCBASE_ACCESS_TOKEN=<your token>
+# go to the git repository
+$ cd docbase-report
 # show monthly ranking
 $ bundle exec exe/docbase_report docbase_report monthly_report 2020-08-01
 ```
@@ -78,6 +80,7 @@ $ bundle exec exe/docbase_report docbase_report monthly_report 2020-08-01
 - [ ] implement weekly report command
 - [ ] direct publish
 - [ ] rename project name
+- [ ] make template cutomizable
 - [ ] publish to ruby gems
 - [ ] add test code
 
