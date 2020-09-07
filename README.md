@@ -46,10 +46,11 @@ $ bundle exec exe/docbase_report docbase_report monthly_report 2020-08-01
 ## Installation
 ```bash
 git clone https://github.com/suusan2go/docbase-report
+cd docbase-report/
 bundle install
 ```
 
-**This gem is not published yet.**
+ **This gem is not published yet.**
 
 Add this line to your application's Gemfile:
 
