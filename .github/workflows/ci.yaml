@@ -12,22 +12,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup System
-        run: |
-          sudo apt-get install libsqlite3-dev
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
       - name: Bundle
-        env:
-          MTSR_RAILS_VERSION: ${{ matrix.rails }}
         run: |
-          export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/${MTSR_RAILS_VERSION}.gemfile"
           bundle install --jobs 4 --retry 3
       - name: Test
-        env:
-          MTSR_RAILS_VERSION: ${{ matrix.rails }}
         run: |
-          export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/${MTSR_RAILS_VERSION}.gemfile"
           bundle exec rake
